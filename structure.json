@@ -1,0 +1,26 @@
+[
+  {
+    "meanings": [
+      {
+        "partOfSpeech": "string",
+        "definitions": [
+          {
+            "antonyms": ["string", "string"],
+            "definition": "string",
+            "example": "string",
+            "synonyms": ["string", "string"]
+          }
+        ]
+      }
+    ],
+    "origin": "strign",
+    "phonetic": "string",
+    "phonetics": [
+      {
+        "text": "string",
+        "audio": "string"
+      }
+    ],
+    "word": "string"
+  }
+]

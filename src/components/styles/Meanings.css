@@ -1,0 +1,13 @@
+.meanings-list {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+.meanings-list-item {
+  margin: 1rem 0;
+}
+
+.meanings-list-item-partOfSpeech {
+  color: #548cff;
+  font-size: 1.3rem;
+}

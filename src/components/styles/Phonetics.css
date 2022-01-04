@@ -1,0 +1,32 @@
+.phonetics-list {
+  padding-inline-start: 20px;
+}
+
+.phonetics-list-item button {
+  background: none;
+  border: none;
+}
+
+.phonetics-list-item {
+  display: flex;
+  margin: 0.1rem 0;
+}
+
+.phonetics-list-item * {
+  margin: 0 0.2rem;
+}
+
+.phonetics-list-item p {
+  font-size: 1.2rem;
+}
+
+.phonetics-list-item button i {
+  font-size: 1.2rem;
+  color: #98bae7;
+  transition: 0.8s cubic-bezier(0.1, 0.6, 0.3, 1);
+}
+
+.phonetics-list-item button:hover i {
+  color: #6e3cbc;
+  transform: rotate(360deg);
+}

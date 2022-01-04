@@ -4,6 +4,13 @@ Basically this is just a dictionary app ( I wonder how you didn't understand fro
 It's written using __[ReactJs](https://reactjs.org)__ library and also uses __[dictionaryapi.dev](https://dictionaryapi.dev/) API__ to fetch the data.\
 So it's just a example project to work with hooks, contexts and APIs to learn React better. This is my first project so I will :green_heart: you if you help and share your ideas and opinions.
 
+#### Table of Contents:
+- [Project Details](#project-details)
+  - [Fetching Data](#fetching-data)
+  - [Data Structure](#data-structure)
+  - [useDictionary Hook](#usedictionary-hook)
+  - [Available Scripts](#available-scripts)
+
 # Project Details
 
 ## Fetching Data

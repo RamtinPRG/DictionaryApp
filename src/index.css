@@ -9,10 +9,6 @@
 html,
 body,
 #root,
-.app {
+.App {
   height: 100vh;
-}
-
-body {
-  margin: 0 8px;
 }

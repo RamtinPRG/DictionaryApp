@@ -24,12 +24,17 @@ function App() {
   return (
     <div className="App">
       <SearchForm />
-      {isPending && <LoadingSpinner />}
-      {error && error === "word not found" && <Animated404 />}
-      {!data && !isPending && !error && (
-        <Message message="You can start with searching a word!" />
-      )}
-      {data && <WordsList data={data} />}
+      <div className="elements-wrapper">
+        {isPending && <LoadingSpinner />}
+        {error && error === "word not found" && <Animated404 />}
+        {!data && !isPending && !error && (
+          <Message message="You can start with searching a word!" />
+        )}
+        {data && <WordsList data={data} />}
+      </div>
+      <footer className="footer">
+        Made by <a href="https://github.com/RamtinPRG/">@RamtinPRG</a> with 💚
+      </footer>
     </div>
   );
 }

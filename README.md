@@ -1,6 +1,77 @@
-# Getting Started with Create React App
+# Dictionary App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Basically this is just a dictionary app ( I wonder how you didn't understand from the name of the repo :expressionless: ).\
+It's written using __[ReactJs](https://reactjs.org)__ library and also uses __[dictionaryapi.dev](https://dictionaryapi.dev/) API__ to fetch the data.\
+So it's just a example project to work with hooks, contexts and APIs to learn React better. This is my first project so I will :green_heart: you if you help and share your ideas and opinions.
+
+### Tasks
+- [x] `SearchForm` components ([SearchForm 🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/SearchForm.jsx))
+- [x] Fetching data from the API
+- [x] Implementing `useDictionary` hook ([useDictionary🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/hooks/useDictionary.js))
+- [x] `LoadingSpinner` component ([LoadingSpinner🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/LoadingSpinner.jsx))
+- [x] `Animated404` component ([Animated404🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Animated404.jsx))
+- [x] `WordsList` component ([WordsList🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/WordsList.jsx))
+- [x] `WordItem` component ([WordItem🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/WordItem.jsx))
+- [x] `Phonetics` component ([Phonetics🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Phonetics.jsx))
+- [x] `Meanings` and `Definitions` components ([Meanings🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Meanings.jsx), [Definitions🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Definitions.jsx))
+- [x] Moving `WordState` to `WordContext` ([WordContext🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/contexts/WordContext.js))
+- [x] Adding synonyms and antonyms
+- [ ] Stylizing `LoadingSpinner`
+- [ ] Implementing router links using [`react-router`](https://github.com/remix-run/react-router)
+
+#### Table of Contents:
+- [Project Details](#project-details)
+  - [Fetching Data](#fetching-data)
+  - [Data Structure](#data-structure)
+  - [useDictionary Hook](#usedictionary-hook)
+  - [Available Scripts](#available-scripts)
+
+# Project Details
+
+## Fetching Data
+You can use this basic syntax for a URL request to the API:\
+`https://api.dictionaryapi.dev/api/v2/entries/en/<word>`
+
+Just like this for the word `hello`:\
+`https://api.dictionaryapi.dev/api/v2/entries/en/hello`
+
+## Data Structure
+After requesting for a word, it will give a data with this main structure you can see in [`structure.json`](https://github.com/RamtinPRG/DictionaryApp/blob/main/structure.json) file (if the word exists):
+```json
+[
+  {
+    "meanings": [
+      {
+        "partOfSpeech": "string",
+        "definitions": [
+          {
+            "antonyms": ["string", "string"],
+            "definition": "string",
+            "example": "string",
+            "synonyms": ["string", "string"]
+          }
+        ]
+      }
+    ],
+    "origin": "strign",
+    "phonetic": "string",
+    "phonetics": [
+      {
+        "text": "string",
+        "audio": "string"
+      }
+    ],
+    "word": "string"
+  }
+]
+```
+> Pay attention, sometimes some of the values in this array doesn't exist then you need to check if they exist
+
+## `useDictionary` Hook
+This hook as you can see in [`/src/hooks/useDictionary.js`](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/hooks/useDictionary.js), get a word and search for it through API and then return 3 values:
+- `data`: which is the response from API
+- `isPending`: its value is `true` when it's still waiting for the server response
+- `error`: holds any error that happened while trying to request or get response
 
 ## Available Scripts
 
@@ -14,11 +85,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -26,45 +92,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

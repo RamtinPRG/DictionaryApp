@@ -4,6 +4,21 @@ Basically this is just a dictionary app ( I wonder how you didn't understand fro
 It's written using __[ReactJs](https://reactjs.org)__ library and also uses __[dictionaryapi.dev](https://dictionaryapi.dev/) API__ to fetch the data.\
 So it's just a example project to work with hooks, contexts and APIs to learn React better. This is my first project so I will :green_heart: you if you help and share your ideas and opinions.
 
+### Tasks
+- [x] `SearchForm` components ([SearchForm 🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/SearchForm.jsx))
+- [x] Fetching data from the API
+- [x] Implementing `useDictionary` hook ([useDictionary🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/hooks/useDictionary.js))
+- [x] `LoadingSpinner` component ([LoadingSpinner🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/LoadingSpinner.jsx))
+- [x] `Animated404` component ([Animated404🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Animated404.jsx))
+- [x] `WordsList` component ([WordsList🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/WordsList.jsx))
+- [x] `WordItem` component ([WordItem🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/WordItem.jsx))
+- [x] `Phonetics` component ([Phonetics🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Phonetics.jsx))
+- [x] `Meanings` and `Definitions` components ([Meanings🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Meanings.jsx), [Definitions🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/Definitions.jsx))
+- [x] Moving `WordState` to `WordContext` ([WordContext🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/contexts/WordContext.js))
+- [x] Adding synonyms and antonyms
+- [ ] Stylizing `LoadingSpinner`
+- [ ] Implementing router links using [`react-router`](https://github.com/remix-run/react-router)
+
 #### Table of Contents:
 - [Project Details](#project-details)
   - [Fetching Data](#fetching-data)
@@ -21,7 +36,7 @@ Just like this for the word `hello`:\
 `https://api.dictionaryapi.dev/api/v2/entries/en/hello`
 
 ## Data Structure
-After requesting for a word, it will give a data with this main structure you can see in `structure.json` file (if the word exists):
+After requesting for a word, it will give a data with this main structure you can see in [`structure.json`](https://github.com/RamtinPRG/DictionaryApp/blob/main/structure.json) file (if the word exists):
 ```json
 [
   {

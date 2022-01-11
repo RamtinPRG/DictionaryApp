@@ -17,6 +17,7 @@ So it's just a example project to work with hooks, contexts and APIs to learn Re
 - [x] Moving `WordState` to `WordContext` ([WordContext🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/contexts/WordContext.js))
 - [x] Adding synonyms and antonyms
 - [ ] Stylizing `LoadingSpinner`
+- [ ] Adding dark mode
 - [ ] Implementing router links using [`react-router`](https://github.com/remix-run/react-router)
 
 #### Table of Contents:

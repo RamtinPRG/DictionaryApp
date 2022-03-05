@@ -2,7 +2,7 @@
 
 Basically this is just a dictionary app ( I wonder how you didn't understand from the name of the repo :expressionless: ).\
 It's written using __[ReactJs](https://reactjs.org)__ library and also uses __[dictionaryapi.dev](https://dictionaryapi.dev/) API__ to fetch the data.\
-So it's just a example project to work with hooks, contexts and APIs to learn React better. This is my first project so I will :green_heart: you if you help and share your ideas and opinions.
+So it's just a example project to work with hooks, contexts and APIs to learn React better. This is my first project so I will be glad if you help and share your ideas and opinions.
 
 ### Tasks
 - [x] `SearchForm` components ([SearchForm 🔗](https://github.com/RamtinPRG/DictionaryApp/blob/main/src/components/SearchForm.jsx))

@@ -18,7 +18,7 @@ function WordItem({ word }) {
           {origin}
         </p>
       )}
-      {word.phonetic && phonetics && <Phonetics phonetics={phonetics} />}
+      {phonetics && phonetics.length>0 && <Phonetics phonetics={phonetics} />}
       <Meanings meanings={meanings} />
     </div>
   );

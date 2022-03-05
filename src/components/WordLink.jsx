@@ -4,9 +4,9 @@ import { WordContext } from "../contexts/WordContext";
 function WordLink({ word, className }) {
   const { setWord } = useContext(WordContext);
   return (
-    <a className={className} onClick={() => setWord(word)}>
+    <span className={className} onClick={() => setWord(word)}>
       {word}
-    </a>
+    </span>
   );
 }
 
